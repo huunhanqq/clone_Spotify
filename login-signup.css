@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #181818; /* Màu nền tối giống Spotify */
+}
+
+.container {
+    text-align: center;
+    background: #282828; /* Màu nền cho container */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    color: #fff; /* Màu chữ trắng */
+}
+
+.container h1, .divider {
+    margin-bottom: 20px;
+}
+
+.form input {
+    width: calc(100% - 22px); /* Điều chỉnh chiều rộng của input */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: none;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative; /* Cho phép căn chỉnh logo */
+}
+
+.direct {
+    background-color: lightblue;
+    margin-top: 20px;
+}
+
+.btn img {
+    height: 20px; /* Đặt kích thước cho logo */
+    position: absolute;
+    left: 20px; /* Căn logo sang trái */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo-btn {
+    background-color: #282828;
+    border: 1px solid white; 
+}
+
+
+
+.divider {
+    color: #b3b3b3;
+    margin: 20px 0;
+}

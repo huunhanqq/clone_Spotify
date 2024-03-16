@@ -1,0 +1,509 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+/* dùng sandbox cho thanh toán và dùng AI để tìm bài hát */
+body {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333; 
+    color: #fff;
+}
+
+
+body.dark-mode .sidebar {
+    background-color: #433b78; 
+}
+
+#theme-switcher {
+    position: fixed;
+    bottom: 7px;
+    left: 50px;
+    width: 150px; 
+    height: 75px; 
+    background-image: url('https://imgur.com/PuyMPgi.png'); 
+    background-color: transparent; 
+    background-size: cover;
+    border: none; 
+    outline: none; 
+    text-indent: -9999px;
+}
+
+body.dark-mode #theme-switcher {
+    background-image: url('https://imgur.com/G3NYrND.png');
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    background-color: lightblue;
+    padding: 30px;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.button_sidebar ul {
+    position: relative;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.button_sidebar ul li {
+    padding: 10px 0px;
+}
+
+
+.button_sidebar ul li a {
+    color: #121212;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.button_sidebar ul li a:hover,
+.button_sidebar ul li a:active,
+.button_sidebar ul li a:focus {
+    color: #ffffff;
+}
+
+.button_sidebar ul li a:hover .fa,
+.button_sidebar ul li a:active .fa,
+.button_sidebar ul li a:focus .fa {
+    color: #ffffff;
+}
+
+.button_sidebar ul li .fa {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.button_sidebar ul li a:hover .fa:hover,
+.button_sidebar ul li a:hover .fa:active,
+.button_sidebar ul li a:hover .fa:focus {
+    color: #ffffff;
+}
+
+.policy {
+    position: absolute;
+    bottom: 80px;
+}
+
+.policy ul {
+    list-style: none;
+}
+
+.policy ul li {
+    padding-bottom: 10px;
+}
+
+.policy ul li a {
+    color: #121212;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.policy ul li a:hover,
+.policy ul li a:active,
+.policy ul li a:focus {
+    text-decoration: underline;
+}
+
+.main-container {
+    margin-left: 245px;
+    margin-bottom: 100px;
+}
+
+.top-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #121212;
+    padding: 14px 30px;
+}
+.top-container .prev-next-buttons {
+    display: flex
+}
+.top-container .prev-next-buttons button {
+    color: #7a7a7a;
+    cursor: not-allowed;
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    font-size: 18px;
+    border: 0px;
+    background-color: #090909;
+    margin-right: 10px;
+}
+.main-container .top-container .prev-next-buttons ul {
+    position: relative;
+    list-style: none;
+}
+
+.main-container .top-container .prev-next-buttons ul li {
+    padding: 10px 0px;
+}
+.main-container .top-container .prev-next-buttons ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+.top-container .prev-next-buttons ul li a:hover,
+.top-container .prev-next-buttons ul li a:active,
+.top-container .prev-next-buttons ul li a:focus {
+    color: #7a7a7a;
+}
+.top-container .prev-next-buttons ul li a:hover .fa,
+.top-container .prev-next-buttons ul li a:active .fa,
+.top-container .prev-next-buttons ul li a:focus .fa {
+    color: #7a7a7a;
+}
+.top-container .prev-next-buttons ul li .fa {
+    font-size: 20px;
+    margin-right: 10px;
+}
+.top-container .prev-next-buttons a:hover ul li .fa:hover,
+.top-container .prev-next-buttons a:hover ul li .fa:active,
+.top-container .prev-next-buttons a:hover ul li .fa:focus {
+    color: #7a7a7a;
+}
+
+.top-container .top-right-container {
+    display: flex;
+    align-items: center;
+}
+
+.top-container .top-right-container ul {
+    list-style: none;
+}
+
+.top-container .top-right-container ul li {
+    display: inline-block;
+    margin: 0px 8px;
+    width: 70px;
+}
+
+.top-container .top-right-container ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.top-container .top-right-container ul li a:hover,
+.top-container .top-right-container ul li a:active,
+.top-container .top-right-container ul li a:focus {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.top-container .top-right-container ul li .divider{
+    color: #f2f2f2;
+    font-size: 26px;
+    margin: 0px 30px;
+    width: auto;
+}
+
+.top-container .top-right-container button {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 30px;
+    border: 0px;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.top-container .top-right-container button:hover,
+.top-container .top-right-container button:active,
+.top-container .top-right-container button:focus {
+    background-color: #f2f2f2;
+}
+body.dark-mode .top-right-container button {
+    background-color: #f2f2f2;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 30px;
+    border: 0px;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+body.dark-mode .top-right-container button:hover,
+body.dark-mode .top-right-container button:active,
+body.dark-mode .top-right-container button:focus {
+    background-color: #000;
+}
+
+.section-title {
+    font-size: 2em;
+    color: #000;
+    margin-bottom: 10px;
+    margin-left: 25px; 
+}
+
+body.dark-mode .section-title {
+    color: #ffffff; 
+}
+
+.track-cards-wrapper {
+    width: 100%; 
+    overflow-x: auto;
+}
+
+.track-cards-container {
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 1500%;
+    width: 600%
+}
+
+.track-card {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    width: 200px; 
+    height: 280px;
+}
+
+.track-card > * {
+    flex: 0 0 auto;
+}
+
+.track-card .track-info {
+    color: #000;
+    text-decoration: none;
+}
+
+.track-card .track-info a {
+    text-decoration: none !important;
+}
+.track-card .track-info a:hover,
+.track-card .track-info a:active,
+.track-card .track-info a:focus {
+    text-decoration: none !important;
+}
+
+.slider {
+    display: inline-flex;
+    flex-direction: row;
+    overflow-x: scroll; 
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.slider .item {
+    min-width: 140px;
+    width: 160px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+}
+.slider .item:hover {
+    background-color: #7a7a7a;
+  }
+.slider .item img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+.slider .item1 {
+    min-width: 140px;
+    width: 160px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+}
+.slider .item1:hover {
+    background-color: #7a7a7a;
+  }
+.slider .item1 img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.slider .item .play {
+    position: relative;
+  }
+.slider .item .play .fa {
+    position: absolute;
+    right: 10px;
+    top: -60px;
+    padding: 18px;
+    background-color: lightskyblue;
+    border-radius: 100%;
+    opacity: 0;
+    transition: all ease 0.4s;
+  }
+.slider .item:hover .play .fa {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+
+.item h4, .item1 h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.item p {
+    color: #989898;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 600;
+}
+
+body.dark-mode .sidebar *,
+body.dark-mode .main-container * {
+    color: #fff !important;
+}
+body.dark-mode .slider .item {
+    min-width: 140px;
+    width: 160px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+}
+body.dark-mode .slider .item:hover {
+    background-color: #7a7a7a;
+  }
+body.dark-mode .slider .item img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+body.dark-mode .slider .item1 {
+    min-width: 140px;
+    width: 160px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+}
+body.dark-mode .slider .item1:hover {
+    background-color: #7a7a7a;
+}
+body.dark-mode .slider .item1 img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+body.dark-mode .slider .item .play {
+    position: relative;
+}
+body.dark-mode .slider .item .play .fa {
+    position: absolute;
+    right: 10px;
+    top: -60px;
+    padding: 18px;
+    background-color: lightskyblue;
+    border-radius: 100%;
+    opacity: 0;
+    transition: all ease 0.4s;
+  }
+body.dark-mode .slider .item:hover .play .fa {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+body.dark-mode .slider .item {
+    min-width: 140px;
+    width: 160px;
+    padding: 15px;
+    background-color: #121212;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+}
+body.dark-mode .slider .item1 {
+    min-width: 140px;
+    width: 160px;
+    padding: 15px;
+    background-color: #121212;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+}
+
+body.dark-mode .sidebar a:hover *,
+body.dark-mode .sidebar a:active *,
+body.dark-mode .sidebar a:focus * {
+    color: #000 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Khoảng cách giữa các ô vuông */
+}
+
+
+
+/* Định dạng cho từng item */
+.item {
+    width: 200px; /* Chiều rộng của ô vuông */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Căn giữa nội dung text */
+    padding: 10px; /* Khoảng cách giữa nội dung và viền của ô */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo đổ bóng cho ô */
+    background-color: #fff; /* Màu nền cho ô */
+    border-radius: 8px; /* Bo góc cho ô */
+}
+
+.item img {
+    width: 100%; /* Chiều rộng của hình ảnh sẽ tự động điều chỉnh cho vừa với ô */
+    height: auto; /* Chiều cao tự động điều chỉnh */
+    border-radius: 8px; /* Bo góc cho hình ảnh */
+    margin-bottom: 8px; /* Khoảng cách giữa hình ảnh và tiêu đề bên dưới */
+}
+
+.item h4 {
+    margin: 0; /* Xóa các khoảng cách mặc định của tiêu đề */
+    padding: 0;
+    font-size: 16px; /* Kích thước chữ cho tiêu đề */
+}

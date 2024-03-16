@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title> SONAR </title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <a href="#">
+                <img src="https://imgur.com/SNIn43z.jpg" alt="Logo" />
+            </a>
+        </div>
+
+        <div class="button_sidebar">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-home"></span>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa fas fa-book"></span>
+                        <span class="text">Your library</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-plus-square"></span>
+                        <span class="text">Create playlist</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="policy">
+            <ul>
+                <li>
+                    <a href="#">
+                        Privacy
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Cookies
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <button id="theme-switcher">Switch Theme</button>
+    </div>
+
+    <div class="main-container">
+        <div class="top-container">
+            <div class="prev-next-buttons">
+                <button type="button" class="fa fas fa-chevron-left"></button>
+                <button type="button" class="fa fas fa-chevron-right"></button>
+                <ul>
+                    <li>
+                        <a href="#" id="searchLink">
+                            <span class="fa fa-search"></span>
+                            <span class="text">Search</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="top-right-container">
+                <ul>
+                    <li>
+                        <a href="#">Support</a>
+                    </li>
+                    <li class="divider">|</li>
+                    <li>
+                        <a href="#">Sign up</a>
+                    </li>
+                </ul>
+                <button type="button">Log in</button>
+            </div>
+           
+        </div>
+
+        <div class="content-container">
+            <div class="section-container">
+                <h1 class="section-title">Browse all </h1>
+                <div class="track-cards-wrapper"></div>
+                <div class="track-cards-container">
+                    <div class="list">
+
+
+                        <div class = "item">
+                            <img src="https://i.scdn.co/image/ab67fb8200005cafe914a07d20cec7a65e2e5dad"
+                                alt="Podcast">
+                                <h4> Podcast</h4>
+                                
+                        </div>
+
+                        <div class = "item">
+                            <img src="https://i.scdn.co/image/ab67706f000000028ed1a5002b96c2ea882541b2"
+                                alt=" Live event">
+                                <h4> Live event</h4>
+                        </div>
+                        
+                        <div class = "item">
+                            <img src="https://t.scdn.co/images/ea364e99656e46a096ea1df50f581efe"
+                                alt="Made for you">
+                                <h4> Made for you</h4>
+                        </div>
+                        
+                        <div class = "item">
+                            <img src="https://i.scdn.co/image/ab67706f000000027ea4d505212b9de1f72c5112"
+                                alt=" New releases">
+                                <h4> New releases</h4>
+                                
+                        </div>
+
+                        <div class = "item">
+                            <img src="https://concerts.spotifycdn.com/images/live-events_category-image.jpg"
+                                alt="BrowseAll">
+                                <h4> Pop</h4>
+                        </div>
+                        
+                        <div class = "item">
+                            <img src="https://t.scdn.co/images/ea364e99656e46a096ea1df50f581efe"
+                                alt="BrowseAll">
+                                <h4> K-Pop</h4>
+                        </div>
+                        <div class = "item">
+                            <img src="https://i.scdn.co/image/ab67fb8200005caf9e3dea60be755ccd97b7351f"
+                                alt="BrowseAll">
+                                <h4> Hip hop</h4>
+                        </div>
+                        
+                        <div class = "item">
+                            <img src="https://i.scdn.co/image/ab6765630000ba8a77d267a5accb8911a92668e1"
+                                alt="BrowseAll">
+                                <h4> Comendy</h4>
+                        </div>
+                        
+                        <div class = "item">
+                            <img src="https://i.scdn.co/image/ab67fb8200005caf8eb00a9a2c00093ccde516c6"
+                                alt="BrowseAll">
+                                <h4>Karaoke</h4>
+                                
+                        </div>
+
+                        <div class = "item">
+                            <img src="https://i.scdn.co/image/ab67fb8200005caf271f9d895003c5f5561c1354"
+                                alt="BrowseAll">
+                                <h4> Mood</h4>
+                        </div>
+                        
+                        <div class = "item">
+                            <img src="https://i.scdn.co/image/ab67fb8200005cafdfdaac1cf9574a196ca25196"
+                                alt="BrowseAll">
+                                <h4> Dance</h4>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
