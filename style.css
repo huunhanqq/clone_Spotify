@@ -507,3 +507,26 @@ body.dark-mode .sidebar a:focus * {
     padding: 0;
     font-size: 16px; /* Kích thước chữ cho tiêu đề */
 }
+
+
+
+#myTextbox {
+    width: 300px; /* Chiều rộng của ô textbox */
+    padding: 10px; /* Đệm bên trong để tăng kích thước và sự thoải mái khi nhập */
+    font-size: 16px; /* Kích thước chữ */
+    border-radius: 10px; /* Bo cong viền của ô textbox */
+    background-color: #121212; /* Màu nền của ô textbox là màu nâu */
+    color:#ffffff; /* Màu chữ là màu trắng */
+}
+
+#myTextbox:focus {
+    border-color: #ffffff; /* Màu viền khi ô textbox được chọn là màu trắng */
+    border-width: 2px; /* Độ dày của viền khi ô textbox được chọn */
+    outline: none; /* Loại bỏ đường viền mặc định khi chọn */
+}
+
+
+.fa-search {
+    color: #ffffff; /* Thay đổi màu sắc của icon thành màu trắng */
+    font-size: 20px; /* Thay đổi kích thước của icon */
+}
